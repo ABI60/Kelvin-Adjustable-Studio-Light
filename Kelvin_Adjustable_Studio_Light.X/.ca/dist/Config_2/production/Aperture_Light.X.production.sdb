@@ -1,0 +1,282 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F1571 ]
+[d frameptr 6 ]
+"9 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\ADC_read.c
+[v _ADC_read ADC_read `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"7 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\init.c
+[v _init init `(v  1 e 1 0 ]
+"7 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\init_adc.c
+[v _init_adc init_adc `(v  1 e 1 0 ]
+"7 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\init_interrupt.c
+[v _init_interrtupt init_interrtupt `(v  1 e 1 0 ]
+"6 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\init_pwm.c
+[v _init_pwm init_pwm `(v  1 e 1 0 ]
+"8 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"54
+[v _ISR ISR `II(v  1 e 1 0 ]
+"8 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\PWM_dc_set_white.c
+[v _PWM_dc_set_white PWM_dc_set_white `(v  1 e 1 0 ]
+"8 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\PWM_dc_set_yellow.c
+[v _PWM_dc_set_yellow PWM_dc_set_yellow `(v  1 e 1 0 ]
+"5 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X/global_variables.h
+[v _lightsEnableFlag lightsEnableFlag `VEuc  1 e 1 0 ]
+"8
+[v _pot_brightness pot_brightness `i  1 e 2 0 ]
+"9
+[v _pot_temperature pot_temperature `i  1 e 2 0 ]
+"11
+[v _white_ratio white_ratio `f  1 e 4 0 ]
+"14
+[v _yellow_DC yellow_DC `i  1 e 2 0 ]
+"352 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic12f1571.h
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S59 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"375
+[s S68 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S73 . 1 `S59 1 . 1 0 `S68 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES73  1 e 1 @11 ]
+"903
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1311
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1446
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"1466
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"1486
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+[s S115 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+"1515
+[s S123 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADGO 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S127 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S130 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[u S133 . 1 `S115 1 . 1 0 `S123 1 . 1 0 `S127 1 . 1 0 `S130 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES133  1 e 1 @157 ]
+"1575
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+[s S246 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+]
+"1707
+[s S253 . 1 `uc 1 LATA 1 0 :6:0 
+]
+[u S255 . 1 `S246 1 . 1 0 `S253 1 . 1 0 ]
+[v _LATAbits LATAbits `VES255  1 e 1 @268 ]
+"1924
+[v _FVRCON FVRCON `VEuc  1 e 1 @279 ]
+"2107
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"2197
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3279
+[v _PWM1PH PWM1PH `VEus  1 e 2 @3473 ]
+"3442
+[v _PWM1DC PWM1DC `VEus  1 e 2 @3475 ]
+"3605
+[v _PWM1PR PWM1PR `VEus  1 e 2 @3477 ]
+"4094
+[v _PWM1CON PWM1CON `VEuc  1 e 1 @3483 ]
+[s S196 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 MODE 1 0 :2:2 
+`uc 1 POL 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 OE 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"4127
+[s S203 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM1MODE0 1 0 :1:2 
+`uc 1 PWM1MODE1 1 0 :1:3 
+]
+[s S207 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM1MODE 1 0 :2:2 
+`uc 1 PWM1POL 1 0 :1:4 
+`uc 1 PWM1OUT 1 0 :1:5 
+`uc 1 PWM1OE 1 0 :1:6 
+`uc 1 PWM1EN 1 0 :1:7 
+]
+[s S214 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 MODE0 1 0 :1:2 
+`uc 1 MODE1 1 0 :1:3 
+]
+[u S218 . 1 `S196 1 . 1 0 `S203 1 . 1 0 `S207 1 . 1 0 `S214 1 . 1 0 ]
+[v _PWM1CONbits PWM1CONbits `VES218  1 e 1 @3483 ]
+"4454
+[v _PWM1CLKCON PWM1CLKCON `VEuc  1 e 1 @3486 ]
+[s S269 . 1 `uc 1 LDS 1 0 :2:0 
+`uc 1 . 1 0 :4:2 
+`uc 1 LDT 1 0 :1:6 
+`uc 1 LDA 1 0 :1:7 
+]
+"4589
+[s S274 . 1 `uc 1 PWM1LDS0 1 0 :1:0 
+`uc 1 PWM1LDS1 1 0 :1:1 
+]
+[s S277 . 1 `uc 1 PWM1LDS 1 0 :2:0 
+`uc 1 . 1 0 :4:2 
+`uc 1 PWM1LDM 1 0 :1:6 
+`uc 1 PWM1LD 1 0 :1:7 
+]
+[s S282 . 1 `uc 1 LDS0 1 0 :1:0 
+`uc 1 LDS1 1 0 :1:1 
+]
+[u S285 . 1 `S269 1 . 1 0 `S274 1 . 1 0 `S277 1 . 1 0 `S282 1 . 1 0 ]
+[v _PWM1LDCONbits PWM1LDCONbits `VES285  1 e 1 @3487 ]
+"4752
+[v _PWM2PH PWM2PH `VEus  1 e 2 @3489 ]
+"4915
+[v _PWM2DC PWM2DC `VEus  1 e 2 @3491 ]
+"5078
+[v _PWM2PR PWM2PR `VEus  1 e 2 @3493 ]
+"5567
+[v _PWM2CON PWM2CON `VEuc  1 e 1 @3499 ]
+"5600
+[s S332 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM2MODE0 1 0 :1:2 
+`uc 1 PWM2MODE1 1 0 :1:3 
+]
+[s S336 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM2MODE 1 0 :2:2 
+`uc 1 PWM2POL 1 0 :1:4 
+`uc 1 PWM2OUT 1 0 :1:5 
+`uc 1 PWM2OE 1 0 :1:6 
+`uc 1 PWM2EN 1 0 :1:7 
+]
+[u S347 . 1 `S196 1 . 1 0 `S332 1 . 1 0 `S336 1 . 1 0 `S214 1 . 1 0 ]
+[v _PWM2CONbits PWM2CONbits `VES347  1 e 1 @3499 ]
+"5927
+[v _PWM2CLKCON PWM2CLKCON `VEuc  1 e 1 @3502 ]
+"6062
+[s S394 . 1 `uc 1 PWM2LDS0 1 0 :1:0 
+`uc 1 PWM2LDS1 1 0 :1:1 
+]
+[s S397 . 1 `uc 1 PWM2LDS 1 0 :2:0 
+`uc 1 . 1 0 :4:2 
+`uc 1 PWM2LDM 1 0 :1:6 
+`uc 1 PWM2LD 1 0 :1:7 
+]
+[u S405 . 1 `S269 1 . 1 0 `S394 1 . 1 0 `S397 1 . 1 0 `S282 1 . 1 0 ]
+[v _PWM2LDCONbits PWM2LDCONbits `VES405  1 e 1 @3503 ]
+"8 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"50
+} 0
+"6 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\init_pwm.c
+[v _init_pwm init_pwm `(v  1 e 1 0 ]
+{
+"34
+} 0
+"7 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\init_interrupt.c
+[v _init_interrtupt init_interrtupt `(v  1 e 1 0 ]
+{
+"12
+} 0
+"7 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\init_adc.c
+[v _init_adc init_adc `(v  1 e 1 0 ]
+{
+"27
+} 0
+"7 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\init.c
+[v _init init `(v  1 e 1 0 ]
+{
+"21
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 9 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 8 ]
+[v ___awdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+[v ___awdiv@dividend dividend `i  1 p 2 4 ]
+"41
+} 0
+"8 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\PWM_dc_set_yellow.c
+[v _PWM_dc_set_yellow PWM_dc_set_yellow `(v  1 e 1 0 ]
+{
+[v PWM_dc_set_yellow@duty_cycle duty_cycle `i  1 p 2 2 ]
+"28
+} 0
+"8 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\PWM_dc_set_white.c
+[v _PWM_dc_set_white PWM_dc_set_white `(v  1 e 1 0 ]
+{
+[v PWM_dc_set_white@duty_cycle duty_cycle `i  1 p 2 2 ]
+"28
+} 0
+"9 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\ADC_read.c
+[v _ADC_read ADC_read `(i  1 e 2 0 ]
+{
+[v ADC_read@channel channel `uc  1 a 1 wreg ]
+"23
+[v ADC_read@result result `i  1 a 2 5 ]
+"9
+[v ADC_read@channel channel `uc  1 a 1 wreg ]
+"11
+[v ADC_read@channel channel `uc  1 a 1 7 ]
+"27
+} 0
+"54 C:\Users\AB_IR\MPLABXProjects\Aperture_Light.X\main.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"62
+} 0

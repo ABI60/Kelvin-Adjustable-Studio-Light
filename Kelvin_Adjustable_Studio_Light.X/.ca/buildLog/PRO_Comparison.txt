@@ -1,0 +1,16 @@
+make -f nbproject/Makefile-PRO_Comparison.mk SUBPROJECTS= .clean-conf
+[31mmake[1]: nbproject/Makefile-PRO_Comparison.mk: No such file or directory
+make[1]: Entering directory 'C:/Users/AB_IR/MPLABXProjects/Aperture_Light.X'
+make[1]: *** No rule to make target 'nbproject/Makefile-PRO_Comparison.mk'.  Stop.
+make[1]: Leaving directory 'C:/Users/AB_IR/MPLABXProjects/Aperture_Light.X'
+nbproject/Makefile-impl.mk:44: recipe for target '.clean-impl' failed
+make: *** [.clean-impl] Error 2[0m
+[31mCLEAN FAILED (exit value 2, total time: 85ms)[0m
+make -f nbproject/Makefile-PRO_Comparison.mk SUBPROJECTS= .build-conf
+[31mmake[1]: nbproject/Makefile-PRO_Comparison.mk: No such file or directory
+make[1]: Entering directory 'C:/Users/AB_IR/MPLABXProjects/Aperture_Light.X'
+make[1]: *** No rule to make target 'nbproject/Makefile-PRO_Comparison.mk'.  Stop.
+make[1]: Leaving directory 'C:/Users/AB_IR/MPLABXProjects/Aperture_Light.X'
+make: *** [.build-impl] Error 2[0m
+nbproject/Makefile-impl.mk:39: recipe for target '.build-impl' failed
+[31mBUILD FAILED (exit value 2, total time: 53ms)[0m

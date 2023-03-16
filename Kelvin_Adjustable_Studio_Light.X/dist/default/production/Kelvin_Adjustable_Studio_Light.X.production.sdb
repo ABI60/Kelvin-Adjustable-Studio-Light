@@ -1,0 +1,278 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F1571 ]
+[d frameptr 6 ]
+"9 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\ADC_read.c
+[v _ADC_read ADC_read `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"7 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\init.c
+[v _init init `(v  1 e 1 0 ]
+"7 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\init_adc.c
+[v _init_adc init_adc `(v  1 e 1 0 ]
+"7 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\init_interrupt.c
+[v _init_interrtupt init_interrtupt `(v  1 e 1 0 ]
+"6 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\init_pwm.c
+[v _init_pwm init_pwm `(v  1 e 1 0 ]
+"18 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"60
+[v _ISR ISR `II(v  1 e 1 0 ]
+"8 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\PWM_dc_set_white.c
+[v _PWM_dc_set_white PWM_dc_set_white `(v  1 e 1 0 ]
+"8 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\PWM_dc_set_yellow.c
+[v _PWM_dc_set_yellow PWM_dc_set_yellow `(v  1 e 1 0 ]
+"352 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic12f1571.h
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S81 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"375
+[s S90 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S95 . 1 `S81 1 . 1 0 `S90 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES95  1 e 1 @11 ]
+"903
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1054
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
+"1311
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1446
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"1466
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"1486
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+[s S142 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+"1515
+[s S150 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADGO 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S154 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S157 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[u S160 . 1 `S142 1 . 1 0 `S150 1 . 1 0 `S154 1 . 1 0 `S157 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES160  1 e 1 @157 ]
+"1575
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+[s S275 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+]
+"1707
+[s S282 . 1 `uc 1 LATA 1 0 :6:0 
+]
+[u S284 . 1 `S275 1 . 1 0 `S282 1 . 1 0 ]
+[v _LATAbits LATAbits `VES284  1 e 1 @268 ]
+"1924
+[v _FVRCON FVRCON `VEuc  1 e 1 @279 ]
+"2107
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"2197
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2435
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+[s S38 . 1 `uc 1 WPUA0 1 0 :1:0 
+`uc 1 WPUA1 1 0 :1:1 
+`uc 1 WPUA2 1 0 :1:2 
+`uc 1 WPUA3 1 0 :1:3 
+`uc 1 WPUA4 1 0 :1:4 
+`uc 1 WPUA5 1 0 :1:5 
+]
+"2453
+[s S45 . 1 `uc 1 WPUA 1 0 :6:0 
+]
+[u S47 . 1 `S38 1 . 1 0 `S45 1 . 1 0 ]
+[v _WPUAbits WPUAbits `VES47  1 e 1 @524 ]
+"3279
+[v _PWM1PH PWM1PH `VEus  1 e 2 @3473 ]
+"3442
+[v _PWM1DC PWM1DC `VEus  1 e 2 @3475 ]
+"3605
+[v _PWM1PR PWM1PR `VEus  1 e 2 @3477 ]
+"4094
+[v _PWM1CON PWM1CON `VEuc  1 e 1 @3483 ]
+[s S225 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 MODE 1 0 :2:2 
+`uc 1 POL 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 OE 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"4127
+[s S232 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM1MODE0 1 0 :1:2 
+`uc 1 PWM1MODE1 1 0 :1:3 
+]
+[s S236 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM1MODE 1 0 :2:2 
+`uc 1 PWM1POL 1 0 :1:4 
+`uc 1 PWM1OUT 1 0 :1:5 
+`uc 1 PWM1OE 1 0 :1:6 
+`uc 1 PWM1EN 1 0 :1:7 
+]
+[s S243 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 MODE0 1 0 :1:2 
+`uc 1 MODE1 1 0 :1:3 
+]
+[u S247 . 1 `S225 1 . 1 0 `S232 1 . 1 0 `S236 1 . 1 0 `S243 1 . 1 0 ]
+[v _PWM1CONbits PWM1CONbits `VES247  1 e 1 @3483 ]
+"4454
+[v _PWM1CLKCON PWM1CLKCON `VEuc  1 e 1 @3486 ]
+[s S298 . 1 `uc 1 LDS 1 0 :2:0 
+`uc 1 . 1 0 :4:2 
+`uc 1 LDT 1 0 :1:6 
+`uc 1 LDA 1 0 :1:7 
+]
+"4589
+[s S303 . 1 `uc 1 PWM1LDS0 1 0 :1:0 
+`uc 1 PWM1LDS1 1 0 :1:1 
+]
+[s S306 . 1 `uc 1 PWM1LDS 1 0 :2:0 
+`uc 1 . 1 0 :4:2 
+`uc 1 PWM1LDM 1 0 :1:6 
+`uc 1 PWM1LD 1 0 :1:7 
+]
+[s S311 . 1 `uc 1 LDS0 1 0 :1:0 
+`uc 1 LDS1 1 0 :1:1 
+]
+[u S314 . 1 `S298 1 . 1 0 `S303 1 . 1 0 `S306 1 . 1 0 `S311 1 . 1 0 ]
+[v _PWM1LDCONbits PWM1LDCONbits `VES314  1 e 1 @3487 ]
+"4752
+[v _PWM2PH PWM2PH `VEus  1 e 2 @3489 ]
+"4915
+[v _PWM2DC PWM2DC `VEus  1 e 2 @3491 ]
+"5078
+[v _PWM2PR PWM2PR `VEus  1 e 2 @3493 ]
+"5567
+[v _PWM2CON PWM2CON `VEuc  1 e 1 @3499 ]
+"5600
+[s S361 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM2MODE0 1 0 :1:2 
+`uc 1 PWM2MODE1 1 0 :1:3 
+]
+[s S365 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM2MODE 1 0 :2:2 
+`uc 1 PWM2POL 1 0 :1:4 
+`uc 1 PWM2OUT 1 0 :1:5 
+`uc 1 PWM2OE 1 0 :1:6 
+`uc 1 PWM2EN 1 0 :1:7 
+]
+[u S376 . 1 `S225 1 . 1 0 `S361 1 . 1 0 `S365 1 . 1 0 `S243 1 . 1 0 ]
+[v _PWM2CONbits PWM2CONbits `VES376  1 e 1 @3499 ]
+"5927
+[v _PWM2CLKCON PWM2CLKCON `VEuc  1 e 1 @3502 ]
+"6062
+[s S423 . 1 `uc 1 PWM2LDS0 1 0 :1:0 
+`uc 1 PWM2LDS1 1 0 :1:1 
+]
+[s S426 . 1 `uc 1 PWM2LDS 1 0 :2:0 
+`uc 1 . 1 0 :4:2 
+`uc 1 PWM2LDM 1 0 :1:6 
+`uc 1 PWM2LD 1 0 :1:7 
+]
+[u S434 . 1 `S298 1 . 1 0 `S423 1 . 1 0 `S426 1 . 1 0 `S311 1 . 1 0 ]
+[v _PWM2LDCONbits PWM2LDCONbits `VES434  1 e 1 @3503 ]
+"8 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\main.c
+[v _lights_hold_flag lights_hold_flag `VEuc  1 e 1 0 ]
+"11
+[v _pot_brightness pot_brightness `ui  1 e 2 0 ]
+"12
+[v _pot_temperature pot_temperature `ui  1 e 2 0 ]
+"14
+[v _white_DC white_DC `ul  1 e 4 0 ]
+"15
+[v _yellow_DC yellow_DC `ui  1 e 2 0 ]
+"18
+[v _main main `(v  1 e 1 0 ]
+{
+"56
+} 0
+"6 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\init_pwm.c
+[v _init_pwm init_pwm `(v  1 e 1 0 ]
+{
+"34
+} 0
+"7 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\init_interrupt.c
+[v _init_interrtupt init_interrtupt `(v  1 e 1 0 ]
+{
+"12
+} 0
+"7 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\init_adc.c
+[v _init_adc init_adc `(v  1 e 1 0 ]
+{
+"27
+} 0
+"7 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\init.c
+[v _init init `(v  1 e 1 0 ]
+{
+"24
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 2 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"8 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\PWM_dc_set_yellow.c
+[v _PWM_dc_set_yellow PWM_dc_set_yellow `(v  1 e 1 0 ]
+{
+[v PWM_dc_set_yellow@duty_cycle duty_cycle `ui  1 p 2 2 ]
+"28
+} 0
+"8 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\PWM_dc_set_white.c
+[v _PWM_dc_set_white PWM_dc_set_white `(v  1 e 1 0 ]
+{
+[v PWM_dc_set_white@duty_cycle duty_cycle `ui  1 p 2 2 ]
+"28
+} 0
+"9 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\ADC_read.c
+[v _ADC_read ADC_read `(ui  1 e 2 0 ]
+{
+[v ADC_read@channel channel `uc  1 a 1 wreg ]
+"23
+[v ADC_read@result result `ui  1 a 2 5 ]
+"9
+[v ADC_read@channel channel `uc  1 a 1 wreg ]
+"11
+[v ADC_read@channel channel `uc  1 a 1 7 ]
+"27
+} 0
+"60 D:\Projects\Kelvin Adjustable Key Light\Kelvin_Adjustable_Studio_Light.X\main.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"68
+} 0
