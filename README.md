@@ -14,9 +14,33 @@ sıkıntı yoktur.
 - Fan ve sıcaklık kontrolü olduğu için, LED leri normalden daha yüksek voltajda çalıştırabilir.
 
 
+# Devre Şemaları:
+<p float="left">
+  <img src="./Resimler/Şema-1.jpg" width="500">
+  <img src="./Resimler/Şema-2.jpg" width="200"> 
+</p>
+
 # Devre Resimleri:
 <p float="left">
-  <img src="./Resimler/Ana Ekran.png" width="200">
-  <img src="./Resimler/Bağlantı Ekranı.png" width="200"> 
+  <img src="./Resimler/Plaket Devre-1.png" width="300">
+  <img src="./Resimler/Plaket Devre-2.png" width="300"> 
 </p>
-<img src="./Resimler/Android Studio Projesi.png" width="600"> 
+
+# Proje Resimleri:
+<p float="left">
+  <img src="./Resimler/Kasa-1.png" width="150">
+  <img src="./Resimler/Kasa-2.png" width="200"> 
+  <img src="./Resimler/Kasa-3.png" width="200">
+</p>
+<p float="left">
+  <img src="./Resimler/Kasa-4.png" width="200">
+  <img src="./Resimler/Kasa-5.png" width="200"> 
+  <img src="./Resimler/Kasa-6.png" width="200"> 
+  <img src="./Resimler/Kasa-7.png" width="200"> 
+</p>
+<p float="left">
+  <img src="./Resimler/Kasa-8.png" width="200">
+  <img src="./Resimler/Kasa-9.png" width="200"> 
+  <img src="./Resimler/Kasa-10.png" width="200"> 
+  <img src="./Resimler/Kasa-11.png" width="200"> 
+</p>
