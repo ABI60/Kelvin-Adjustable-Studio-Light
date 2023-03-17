@@ -1,4 +1,4 @@
-# Kelvin Ayrlı Studio Işığı
+# Kelvin Ayrlı Stüdyo Işığı
 C ile ve MPLAB kullanılarak yazılmış PIC16F1847 mikrodenetleyicisi ile oluşturulan kelvin ayarlı LED kontrol programı.
 
 - Sıcak ve soğuk ışıklı LED lerin PWM ile çeşitli şiddetlerde karıştırarak farklı kelvin ayarları elde eder.
